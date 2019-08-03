@@ -43,6 +43,11 @@ jobs:
       # run tests!
       - run: ./gradlew test
 
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./
+
 
   deploy:
     docker:
